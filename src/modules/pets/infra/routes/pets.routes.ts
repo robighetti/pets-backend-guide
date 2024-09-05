@@ -10,7 +10,7 @@ import {
   getOnePet,
 } from '../controllers/pets.controller'
 
-export async function usersRoutes(app: FastifyInstance) {
+export async function petsRoutes(app: FastifyInstance) {
   app.get(
     '/',
     {

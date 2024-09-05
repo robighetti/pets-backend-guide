@@ -13,23 +13,19 @@ model Profiles {
   description String
   is_admin    Boolean @default(false)
   status      Boolean @default(true)
-  users       Users[]
 
   @@map("profiles")
 }
 
 model Users {
-  id         String  @id @default(uuid())
-  name       String
-  email      String  @unique
-  whatsapp   String
-  avatar     String?
-  password   String
-  id_profile String
-  status     Boolean @default(true)
+  id       String  @id @default(uuid())
+  name     String
+  email    String  @unique
+  whatsapp String
+  avatar   String?
+  password String
 
-  profile Profiles @relation(fields: [id_profile], references: [id])
-  tokens  Tokens[]
+  tokens Tokens[]
 
   @@map("users")
 }

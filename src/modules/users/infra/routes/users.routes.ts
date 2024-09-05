@@ -1,13 +1,7 @@
 import { FastifyInstance } from 'fastify'
 
-// import { ensureAuthentication } from '@shared/middlewares/ensure-authentication'
+import { createNewUser } from '../controllers/users.controller'
 
 export async function usersRoutes(app: FastifyInstance) {
-  app.post(
-    '/',
-    // {
-    //   onRequest: ensureAuthentication,
-    // },
-    () => console.log('Hello World'),
-  )
+  app.post('/', createNewUser)
 }
