@@ -1,0 +1,1 @@
+# Template de API usando Fastfy e Prisma
