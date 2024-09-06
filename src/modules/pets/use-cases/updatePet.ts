@@ -11,7 +11,7 @@ export class UpdatePet {
 
     if (!pet) throw new AppError('Pet not found')
 
-    const updatedPet = await this.petsRepository.updatePet(pet)
+    const updatedPet = await this.petsRepository.updatePet(data)
 
     return updatedPet
   }
