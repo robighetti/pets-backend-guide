@@ -7,6 +7,6 @@ export class GetOnePet {
   async execute(id: string) {
     if (!id) throw new AppError('Id must be provided')
 
-    await this.petsRepository.findOnePet(id)
+    return this.petsRepository.findOnePet(id)
   }
 }
