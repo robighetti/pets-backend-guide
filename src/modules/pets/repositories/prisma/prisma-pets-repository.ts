@@ -4,7 +4,7 @@ import { PetsRepository, PetDataProps } from '../pets-repository'
 
 export class PrismaPetsRepository implements PetsRepository {
   async findAllPets() {
-    return prisma.pets.findMany()
+    return prisma.pets.findMany({ orderBy: { name: 'asc' } })
   }
 
   async findOnePet(id: string) {
